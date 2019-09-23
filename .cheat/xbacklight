@@ -1,0 +1,2 @@
+## Change backlight settings
+xbacklight -set 70

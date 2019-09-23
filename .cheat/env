@@ -1,0 +1,45 @@
+## Handle environment variables
+
+# Display
+
+## Print all or part of environment.
+printenv
+printenv | more
+printenv MY_VAR
+
+## Print all exported environment or run a program in a modified environment.
+env | more
+env
+
+## Print the name and value of each shell variable.
+set
+
+# Define environment variables
+
+## Create a new shell variable with the name
+MY_VAR='value'
+
+
+## To create an environment variable simply export the shell variable as an environment variable
+export MY_VAR
+
+## You can also set environment variables in a single line
+export MY_NEW_VAR="My New Var"
+
+# Persistent Environment Variables
+
+## System wide environment file
+
+### /etc/environment file, with format
+FOO=bar
+VAR_TEST="Test Var"
+
+### /etc/profile file, with format. (loaded when a shell in entered)
+export JAVA_HOME="/path/to/java/home"
+export PATH=$PATH:$JAVA_HOME/bin
+
+### ~/.bashrc file. Per-user shell specific configuration files. 
+export PATH="$HOME/bin:$PATH"
+
+# Load environment from file
+source ~/.bashrc

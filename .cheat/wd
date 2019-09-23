@@ -1,0 +1,6 @@
+# Warp to folder
+wd <key>
+
+# Add warp point
+# navigate to location then
+wd add <key>

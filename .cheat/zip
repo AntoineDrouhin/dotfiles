@@ -1,0 +1,8 @@
+# Zip file
+zip singlefile.zip original_file
+
+# Zip folder
+zip -r example.zip original_folder
+
+# Unzip using unzip
+

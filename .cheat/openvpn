@@ -1,0 +1,2 @@
+# Enable vpn
+sudo openvpn ~/openvpn-config/my-config.ovpn

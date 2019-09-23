@@ -1,0 +1,5 @@
+# RDP with clipboard: 
+xfreerdp +clipboard /v:12.345.678.90 /u:username /p:q:"password" /size:1920x1020
+
+# RDP with clipboard and shared folder: 
+xfreerdp +clipboard /v:12.345.678.90 /u:username /p:q:"password"  /drive:toto,./ /size:1920x1020

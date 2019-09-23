@@ -1,0 +1,16 @@
+# Search locally
+Ctrl + T
+
+# Complete command
+cat **<Tab>
+
+# Complete environment variables
+unset **<Tab>
+unalias **<Tab>
+export **<Tab>
+
+# Complete ssh and telnet with /etc/hosts and ~/.ssh/config content.
+ssh **<Tab>
+
+# Complete kill command
+kill -9 <Tab>
