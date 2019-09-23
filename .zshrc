@@ -22,9 +22,6 @@ export GOPATH=$HOME/dev/go
 # Azure data studio alias
 alias data="azuredatastudio"
 
-# fzf
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -35,6 +32,9 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 # MSSQL cli
 export PATH="$PATH:/opt/mssql-tools/bin"
+
+#fzf
+### See at the end of this file
 
 ###########################################################################
 ############################ ZSH configuration ############################
@@ -106,3 +106,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+### This is set at the end the end so the bindings are not overwritten by zsh plugins
+# fzf
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
