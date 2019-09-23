@@ -20,7 +20,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export GOPATH=$HOME/dev/go
 
 # Azure data studio alias
-alias data="azuredatastudio"
+alias ads="azuredatastudio"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
