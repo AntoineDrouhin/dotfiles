@@ -5,6 +5,11 @@
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/usr/local/bin"
 
+# Tilix
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte-2.91.sh
+fi
+
 # ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
