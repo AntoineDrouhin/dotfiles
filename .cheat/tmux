@@ -1,0 +1,30 @@
+### Session management
+# start tmux
+tmux
+# Detach from tmux
+ctrl-b d
+# Restore tmux session
+tmux attach
+# Create new tmux session with name (-s to name)
+tmux new -s test
+# Attach to named detached tmux session
+tmux a -t test
+# Display tmux sessions
+tmux ls
+# Rename session
+Ctrl-b $
+# Switch session
+Ctrl-b s
+# Show tmux help screen
+Ctrl-b ?
+### Window management
+# Create a new window.
+Ctrl-b c
+# Destroy tmux window:
+Ctrl-b x
+# Switch between windows:
+Ctrl-b [0-9] or Ctrl-b Arrows
+# Split windows horizontally:
+Ctrl-b %
+# Split windows vertically:
+Ctrl-b "
