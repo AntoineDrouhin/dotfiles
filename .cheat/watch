@@ -1,0 +1,2 @@
+# Run a command at regular intervals.
+watch -n <seconds> <your command>
