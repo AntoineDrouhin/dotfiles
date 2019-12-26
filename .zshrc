@@ -38,6 +38,9 @@ export PATH="$PATH:$HOME/.cargo/bin"
 # MSSQL cli
 export PATH="$PATH:/opt/mssql-tools/bin"
 
+# Kubectl 
+alias k='kubectl'
+
 #fzf
 ### See at the end of this file
 
