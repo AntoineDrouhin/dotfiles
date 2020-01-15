@@ -20,11 +20,20 @@ nnoremap <silent> <C-p> :FZF<CR>
 
 " DISPLAY
 
-set number          " display line number
 set showcmd         " shows the last command entered in the bottom right of vim
 set cursorline      " highlight the cursor line
 set lazyredraw      " redraw only when need to
 set showmatch       " highlight matching [{()}]
+set number!          " display line number
+"" set relativenumber!  " display line number relatively to current line
+
+" Have line number in hybrid mode in current file during normal mode 
+"   and in absolute mode anywhere else
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 " folding
 set foldenable      " enable folding
