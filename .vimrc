@@ -8,6 +8,7 @@ syntax enable
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set expandtab       " tab are spaces  
+set shiftwidth=2
 
 
 " SEARCH
@@ -17,6 +18,7 @@ set hlsearch        " highlight matches
 
 set rtp+=~/.fzf     " enable fuzzy finder https://github.com/junegunn/fzf
 nnoremap <silent> <C-p> :FZF<CR>
+
 
 " DISPLAY
 
@@ -35,8 +37,9 @@ set number!          " display line number
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
+
 " folding
-set foldenable      " enable folding
+set nofoldenable      " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10     " 10 nested fold max
 set foldmethod=indent   " fold based on indent level
@@ -69,11 +72,13 @@ set wildmenu                    " visual autocomplete for command menu
 nnoremap B ^
 nnoremap E $
 
+
 " Easier pane switching
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
 
 " BACKUPS
 
@@ -84,3 +89,31 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup " enable backup support
 
 
+"  COC 
+
+call plug#begin()
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+call plug#end()
+
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-go', 'coc-python', 'coc-rls']
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+
+" Custom Shortcuts
+
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
