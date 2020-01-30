@@ -5,6 +5,8 @@
 ## Use native package 
 ##########################################################
 
+# Script location
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # COLORS 
 
@@ -31,4 +33,7 @@ git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/pack/typescri
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+## Vimfiles
+
+ln -s $DIR/vimfiles ~/vimfiles
 
