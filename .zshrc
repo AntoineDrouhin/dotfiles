@@ -137,6 +137,8 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 export KEYTIMEOUT=1
 
+
+### Enable using up to run through history to be based on already typed text#
 autoload -Uz history-search-end
 
 zle -N history-beginning-search-backward-end history-search-end
@@ -150,6 +152,12 @@ bindkey -M viins '^[[A' history-beginning-search-backward-end \
                  '^[OA' history-beginning-search-backward-end \
                  '^[[B' history-beginning-search-forward-end \
                  '^[OB' history-beginning-search-forward-end
+############################################################################## 
+
+### Keep using beginning of the line and end of the line using vi mode #######
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+############################################################################## 
 
 ### This is set at the end the end so the bindings are not overwritten by zsh plugins
 # fzf
