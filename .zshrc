@@ -159,6 +159,10 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 ############################################################################## 
 
+### Enable reverse completion with shift + tab ##############################
+bindkey '^[[Z' reverse-menu-complete
+############################################################################## 
+
 ### This is set at the end the end so the bindings are not overwritten by zsh plugins
 # fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
