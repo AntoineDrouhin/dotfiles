@@ -163,6 +163,12 @@ bindkey "^[[F" end-of-line
 bindkey '^[[Z' reverse-menu-complete
 ############################################################################## 
 
+### Enable move cursor wo left/right word witch ctrl left/right ##############
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+############################################################################## 
+
+
 ### This is set at the end the end so the bindings are not overwritten by zsh plugins
 # fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
