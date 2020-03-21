@@ -1,0 +1,6 @@
+# Grep
+grep [OPTIONS] PATTERN [File...]
+## Exclude pattern
+--exclude=GLOB
+--exclude-from=FILE
+--exclude-dir=GLOB
