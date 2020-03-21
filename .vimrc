@@ -97,6 +97,10 @@ call plug#end()
 
 let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-go', 'coc-python', 'coc-rls']
 
+" always show signcolumns
+set signcolumn=yes
+
+" remap coc go tos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
