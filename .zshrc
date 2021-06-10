@@ -172,3 +172,5 @@ bindkey "^[[1;5D" backward-word
 ### This is set at the end the end so the bindings are not overwritten by zsh plugins
 # fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+
+echo "(╯°□°）╯︵ ┻━┻"
